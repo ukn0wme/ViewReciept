@@ -1,4 +1,4 @@
-package com.example.viewreciept
+package com.example.viewreciept.ui.view.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
+import com.example.viewreciept.ui.viewmodel.FirebaseAuthViewModel
 import com.example.viewreciept.databinding.FragmentRegisterBinding
+import com.example.viewreciept.ui.view.activity.AuthenticationActivity
+import com.example.viewreciept.util.PasswordValidator
 
 class RegistrationFragment : Fragment() {
 

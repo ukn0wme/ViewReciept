@@ -13,10 +13,10 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.view.activity.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".AuthenticationActivity"
+            android:name=".ui.view.activity.AuthenticationActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">

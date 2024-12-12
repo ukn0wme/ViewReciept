@@ -1,11 +1,11 @@
-package com.example.viewreciept
+package com.example.viewreciept.ui.view.activity
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import com.example.viewreciept.ui.view.fragment.LoginFragment
+import com.example.viewreciept.R
+import com.example.viewreciept.ui.view.fragment.RegistrationFragment
 import com.example.viewreciept.databinding.ActivityAuthenticationBinding
 
 class AuthenticationActivity : AppCompatActivity() {

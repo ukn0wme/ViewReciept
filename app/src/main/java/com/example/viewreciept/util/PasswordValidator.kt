@@ -1,4 +1,4 @@
-package com.example.viewreciept
+package com.example.viewreciept.util
 
 object PasswordValidator {
 

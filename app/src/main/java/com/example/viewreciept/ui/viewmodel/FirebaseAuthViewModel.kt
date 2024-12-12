@@ -1,6 +1,7 @@
-package com.example.viewreciept
+package com.example.viewreciept.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
+import com.example.viewreciept.util.FirebaseErrorHandler
 import com.google.firebase.auth.FirebaseAuth
 
 class FirebaseAuthViewModel : ViewModel() {
