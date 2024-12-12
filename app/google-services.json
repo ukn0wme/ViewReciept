@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "412594715005",
+    "project_id": "viewreciept-d960d",
+    "storage_bucket": "viewreciept-d960d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412594715005:android:e7cea5fa9237c632387414",
+        "android_client_info": {
+          "package_name": "com.example.viewreciept"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTjHTZXMY4he9Lh2wpl5fc4upO0L_guKs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
