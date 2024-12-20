@@ -1,5 +1,6 @@
-package com.example.viewreciept.ui.view.fragment
+package com.example.viewreciept.ui.view.fragment.authentication
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import androidx.fragment.app.activityViewModels
 import com.example.viewreciept.ui.viewmodel.FirebaseAuthViewModel
 import com.example.viewreciept.databinding.FragmentLoginBinding
 import com.example.viewreciept.ui.view.activity.AuthenticationActivity
+import com.example.viewreciept.ui.view.activity.MainActivity
 
 class LoginFragment : Fragment() {
 
@@ -40,7 +42,7 @@ class LoginFragment : Fragment() {
             viewModel.login(email, password) { isSuccess, message ->
                 Toast.makeText(requireContext(), message, Toast.LENGTH_LONG).show()
                 if (isSuccess) {
-                    // Navigate to dashboard or home screen
+                    navigateToMainActivity()
                 }
             }
         }
@@ -53,6 +55,12 @@ class LoginFragment : Fragment() {
         if (isRegistrationSuccess) {
             Toast.makeText(requireContext(), "Registration successful! Please log in.", Toast.LENGTH_LONG).show()
         }
+    }
+
+    private fun navigateToMainActivity() {
+        val intent = Intent(requireContext(), MainActivity::class.java)
+        startActivity(intent)
+        requireActivity().finish() // Close AuthenticationActivity to prevent back navigation
     }
 
     override fun onDestroyView() {

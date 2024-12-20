@@ -1,12 +1,14 @@
 package com.example.viewreciept.ui.view.activity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.example.viewreciept.ui.view.fragment.LoginFragment
+import com.example.viewreciept.ui.view.fragment.authentication.LoginFragment
 import com.example.viewreciept.R
-import com.example.viewreciept.ui.view.fragment.RegistrationFragment
+import com.example.viewreciept.ui.view.fragment.authentication.RegistrationFragment
 import com.example.viewreciept.databinding.ActivityAuthenticationBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class AuthenticationActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAuthenticationBinding
@@ -16,8 +18,14 @@ class AuthenticationActivity : AppCompatActivity() {
         binding = ActivityAuthenticationBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Load the LoginFragment by default
-        loadFragment(LoginFragment())
+        val firebaseAuth = FirebaseAuth.getInstance()
+        if (firebaseAuth.currentUser != null) {
+            // User is already logged in, navigate to MainActivity
+            navigateToMainActivity()
+        } else {
+            // Load the LoginFragment by default
+            loadFragment(LoginFragment())
+        }
     }
 
     private fun loadFragment(fragment: Fragment, args: Bundle? = null) {
@@ -40,5 +48,11 @@ class AuthenticationActivity : AppCompatActivity() {
             putBoolean("registration_success", isRegistrationSuccess)
         }
         loadFragment(LoginFragment(), args)
+    }
+
+    private fun navigateToMainActivity() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish() // Close AuthenticationActivity
     }
 }

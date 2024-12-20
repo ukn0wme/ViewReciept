@@ -1,4 +1,4 @@
-package com.example.viewreciept.ui.view.fragment
+package com.example.viewreciept.ui.view.fragment.authentication
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

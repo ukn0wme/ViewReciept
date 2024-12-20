@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("kotlin-parcelize")
+    id("kotlin-kapt")
     id("com.google.gms.google-services")
 }
 
@@ -52,7 +53,7 @@ android {
 }
 
 dependencies {
-    implementation (platform("androidx.compose:compose-bom:2023.09.00")) // Compatible with Compose Compiler 1.5.12
+    implementation (platform("androidx.compose:compose-bom:2023.09.00"))
 
     // Add your Compose dependencies
     implementation ("androidx.compose.ui:ui")
@@ -61,6 +62,10 @@ dependencies {
     debugImplementation ("androidx.compose.ui:ui-tooling")
     debugImplementation ("androidx.compose.ui:ui-test-manifest")
     androidTestImplementation ("androidx.compose.ui:ui-test-junit4")
+
+    implementation("androidx.room:room-runtime:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
 
     // Import the Firebase BoM
     implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
@@ -92,7 +97,7 @@ dependencies {
 
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
     implementation("com.squareup.okhttp3:okhttp:4.11.0")
-    implementation("androidx.activity:activity:1.6.1")
+    implementation(libs.androidx.activity)
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
