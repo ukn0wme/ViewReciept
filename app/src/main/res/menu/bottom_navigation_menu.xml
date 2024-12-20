@@ -6,12 +6,18 @@
         android:icon="@drawable/icon_search"/>
 
     <item
-        android:id="@+id/nav_categories"
-        android:title="Categories"
-        android:icon="@drawable/icon_categories"/>
+        android:id="@+id/nav_areas"
+        android:title="Areas"
+        android:icon="@drawable/icon_areas"/>
 
     <item
         android:id="@+id/nav_favorites"
-        android:title="Favorites"
+        android:title="Bookmark"
         android:icon="@drawable/icon_bookmark"/>
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/icon_profile"
+        android:title="Profile" />
+
 </menu>

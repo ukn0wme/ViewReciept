@@ -1,5 +1,6 @@
 package com.example.viewreciept.data.network
 
+import com.example.viewreciept.data.model.entity.AreasResponse
 import retrofit2.http.Query
 import com.example.viewreciept.data.model.entity.MealsResponse
 import retrofit2.http.GET
@@ -24,4 +25,10 @@ interface ApiServiceInterface {
     suspend fun filterByArea(
         @Query("a") mealId:String
     ) : Response<MealsResponse>
+
+    //list.php?a=list
+    @GET("list.php")
+    suspend fun listAreas(
+        @Query("a") list: String = "list"
+    ) : Response<AreasResponse>
 }

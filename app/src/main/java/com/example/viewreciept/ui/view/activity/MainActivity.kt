@@ -8,8 +8,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.viewreciept.R
 import com.example.viewreciept.databinding.ActivityMainBinding
+import com.example.viewreciept.ui.view.fragment.main.AreasFragment
 import com.example.viewreciept.ui.view.fragment.main.BookmarkFragment
 import com.example.viewreciept.ui.view.fragment.main.MealSearchFragment
+import com.example.viewreciept.ui.view.fragment.main.ProfileFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,8 +29,8 @@ class MainActivity : AppCompatActivity() {
             when(item.itemId){
                 R.id.nav_search -> openFragment(MealSearchFragment())
                 R.id.nav_favorites -> openFragment(BookmarkFragment())
-//                R.id.nav_areas -> openFragment(AreasFragment())
-//                R.id.nav_profile -> openFragment(ProfileFragment())
+                R.id.nav_areas -> openFragment(AreasFragment())
+                R.id.nav_profile -> openFragment(ProfileFragment())
             }
             true
         }
