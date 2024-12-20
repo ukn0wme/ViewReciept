@@ -38,9 +38,8 @@ The project leverages the following endpoints from TheMealDB:
 
 ### Prerequisites
 
-- A code editor (VSCode, Sublime Text, etc.).
+- A code editor - Android studio
 - A modern browser or a tool like `Postman` for testing API responses.
-- Optional: Node.js and npm if you plan to run a local development server or use a frontend framework.
 
 ### Installation
 
